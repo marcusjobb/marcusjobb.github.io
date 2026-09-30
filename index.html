@@ -52,10 +52,17 @@
           "https://github.com/marcusjobb"
         ],
         "jobTitle": "Lärare i mjukvaruutveckling",
-        "description": "Marcus Ackre Medina är lärare i mjukvaruutveckling vid Nion Education och skapar gratis studiematerial för YH-studerande i programmering och mjukvaruutveckling.",
+        "description": "Marcus Ackre Medina är lärare i mjukvaruutveckling vid Nion Education — ett dotterbolag till det internationella konsultbolaget Nion IT — och skapar gratis studiematerial för YH-studerande i programmering och mjukvaruutveckling.",
         "worksFor": {
-          "@type": "EducationalOrganization",
-          "name": "Nion Education"
+          "@type": "Organization",
+          "name": "Nion Education",
+          "url": "https://nionit.com/nion-education/",
+          "description": "Nion Education är ett dotterbolag till Nion IT som specialiserar sig på YH-utbildning med fokus på de studerandes bästa.",
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "Nion IT",
+            "url": "https://nionit.com/"
+          }
         },
         "knowsAbout": [
           "C#", ".NET", "Java", "Git", "Microsoft Azure",
@@ -390,7 +397,7 @@
   <header class="hero">
     <p class="prompt" aria-hidden="true">$ ls ~/studiematerial/</p>
     <h1>Marcus Ackre Medina</h1>
-    <p class="sub">Lärare i mjukvaruutveckling · <span itemscope itemtype="https://schema.org/EducationalOrganization"><span itemprop="name">Nion Education</span></span> · YH-böcker för studerande</p>
+    <p class="sub">Lärare i mjukvaruutveckling · <span itemscope itemtype="https://schema.org/Organization"><a itemprop="url" href="https://nionit.com/nion-education/" rel="noopener" style="color:inherit;text-decoration:none"><span itemprop="name">Nion Education</span></a></span> · YH-böcker för studerande</p>
   </header>
 
   <main>
@@ -454,7 +461,11 @@
     <section class="about" aria-label="Om materialet">
       <p>
         <strong>Marcus Ackre Medina</strong> är lärare i mjukvaruutveckling vid
-        <strong>Nion Education</strong>, en yrkeshögskola (YH) i Sverige.
+        <strong><a href="https://nionit.com/nion-education/" rel="noopener" style="color:inherit">Nion Education</a></strong>
+        — ett dotterbolag till det internationella konsultbolaget
+        <a href="https://nionit.com/" rel="noopener" style="color:inherit">Nion IT</a>
+        med kontor i Stockholm, Göteborg, Malmö, Skopje, Bitola och Sofia.
+        Nion Education specialiserar sig på YH-utbildning med fokus på de studerandes bästa.
         Alla böcker är kostnadsfria, skrivna på svenska och anpassade för
         YH-studerande som siktar på jobb som mjukvaruutvecklare.
       </p>
