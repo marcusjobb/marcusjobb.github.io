@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marcus Ackre Medina — Studiematerial</title>
+  <meta name="description" content="YH-studiematerial i programmering av Marcus Ackre Medina — C#, Java, Git, Azure och projektmetodik.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <style>
+    /* Layout: hero + book grid. Dark: GitHub-night. Light: clean paper. */
+    :root {
+      --bg:       #ffffff;
+      --surface:  #f6f8fa;
+      --border:   #d0d7de;
+      --fg:       #1f2328;
+      --muted:    #636c76;
+      --accent:   #0969da;
+      --mono:     'JetBrains Mono', 'Courier New', monospace;
+      --sans:     'Plus Jakarta Sans', system-ui, sans-serif;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:      #0d1117;
+        --surface: #161b22;
+        --border:  #30363d;
+        --fg:      #e6edf3;
+        --muted:   #8b949e;
+        --accent:  #f7a800;
+        color-scheme: dark;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--sans);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+      padding: 3.5rem 1.25rem 4rem;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 680px;
+      margin: 0 auto 3.5rem;
+      text-align: center;
+    }
+    .hero .prompt {
+      font-family: var(--mono);
+      font-size: .8rem;
+      color: var(--accent);
+      letter-spacing: .04em;
+      margin-bottom: .75rem;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 700;
+      margin: 0 0 .5rem;
+      line-height: 1.15;
+    }
+    .hero .sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: .75rem;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Book grid ── */
+    .grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .18s, transform .18s, box-shadow .18s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--lang-color);
+      border-radius: 10px 0 0 10px;
+    }
+    .card:hover {
+      border-color: var(--lang-color);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,.12);
+    }
+    .card:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .card-badge {
+      font-family: var(--mono);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--lang-color);
+      padding: .2em .55em;
+      background: color-mix(in srgb, var(--lang-color) 12%, transparent);
+      border-radius: 4px;
+      width: fit-content;
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin: 0;
+    }
+    .card-desc {
+      font-size: .875rem;
+      color: var(--muted);
+      margin: 0;
+      flex: 1;
+      line-height: 1.5;
+    }
+    .card-cta {
+      font-family: var(--mono);
+      font-size: .78rem;
+      color: var(--lang-color);
+      margin-top: .25rem;
+    }
+    .card-cta::after { content: ' →'; }
+
+    .lang-csharp    { --lang-color: #9c5dff; }
+    .lang-java      { --lang-color: #f89820; }
+    .lang-git       { --lang-color: #f05033; }
+    .lang-azure     { --lang-color: #0089d6; }
+    .lang-projektet { --lang-color: #1aab8a; }
+
+    /* ── Footer ── */
+    footer {
+      max-width: 900px;
+      margin: 3rem auto 0;
+      text-align: center;
+      font-size: .8rem;
+      color: var(--muted);
+      font-family: var(--mono);
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <p class="prompt">$ ls ~/studiematerial/</p>
+    <h1>Marcus Ackre Medina</h1>
+    <p class="sub">Lärare i mjukvaruutveckling · Nion Education · YH-böcker för studerande</p>
+  </div>
+
+  <div class="divider">böcker</div>
+
+  <div class="grid">
+
+    <a class="card lang-csharp" href="https://marcusjobb.github.io/programmering-csharp/">
+      <span class="card-badge">C# · .NET</span>
+      <h2 class="card-title">Programmering i C#</h2>
+      <p class="card-desc">Grundläggande till avancerad C# — syntax, OOP, LINQ, async/await, patterns och moderna features genom C# 15.</p>
+      <span class="card-cta">Läs boken</span>
+    </a>
+
+    <a class="card lang-java" href="https://marcusjobb.github.io/java-bok/">
+      <span class="card-badge">Java</span>
+      <h2 class="card-title">Java-programmering</h2>
+      <p class="card-desc">Objektorienterad programmering i Java — klasser, arv, interface, samlingar och JVM-koncepten du behöver i arbetslivet.</p>
+      <span class="card-cta">Läs boken</span>
+    </a>
+
+    <a class="card lang-git" href="https://marcusjobb.github.io/git-bok/">
+      <span class="card-badge">Git</span>
+      <h2 class="card-title">Git</h2>
+      <p class="card-desc">Versionshantering från grunden — commits, branching, konflikter, GitHub-flöden och hur team faktiskt arbetar med Git.</p>
+      <span class="card-cta">Läs boken</span>
+    </a>
+
+    <a class="card lang-azure" href="https://marcusjobb.github.io/azure-studiebok/">
+      <span class="card-badge">Azure · Cloud</span>
+      <h2 class="card-title">Azure och moln i C#</h2>
+      <p class="card-desc">Molntjänster i praktiken — Azure-resurser, App Service, Storage, Functions och hur du driftsätter C#-applikationer i molnet.</p>
+      <span class="card-cta">Läs boken</span>
+    </a>
+
+    <a class="card lang-projektet" href="https://marcusjobb.github.io/projektmetodik-bok/">
+      <span class="card-badge">Scrum · Agilt</span>
+      <h2 class="card-title">Projektmetodik</h2>
+      <p class="card-desc">Scrum, Kanban och Vattenfall — arbetsmetoder, roller, ceremonier och hur du planerar och levererar mjukvaruprojekt.</p>
+      <span class="card-cta">Läs boken</span>
+    </a>
+
+  </div>
+
+  <footer>
+    <p>
+      <a href="https://www.linkedin.com/in/marcusmedina/">LinkedIn</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/marcusjobb">GitHub</a>
+      &nbsp;·&nbsp;
+      <a href="https://marcusmedina.pro">marcusmedina.pro</a>
+    </p>
+  </footer>
+
+</body>
+</html>
