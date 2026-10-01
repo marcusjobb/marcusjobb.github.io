@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://marcusjobb.github.io/sitemap-index.xml
 Sitemap: https://marcusjobb.github.io/azure-studiebok/sitemap-index.xml
 Sitemap: https://marcusjobb.github.io/git-bok/sitemap-index.xml
 Sitemap: https://marcusjobb.github.io/java-bok/sitemap-index.xml
