@@ -6,7 +6,7 @@
 
   <!-- ── Primary SEO ── -->
   <title>Marcus Ackre Medina – YH-böcker i C#, Java, Git och Azure | Nion Education</title>
-  <meta name="description" content="Sex kostnadsfria programmeringsböcker för YH-utbildning av Marcus Ackre Medina, lärare vid Nion Education. Täcker C# (.NET), Java, Git, Azure, projektmetodik och klassiska Usborne Computer Books.">
+  <meta name="description" content="Sju kostnadsfria programmeringsböcker för YH-utbildning av Marcus Ackre Medina, lärare vid Nion Education. Täcker C# (.NET), Java, Git, Azure, projektmetodik, klassiska Usborne Computer Books och Programmeringstermer från 2009.">
   <meta name="author" content="Marcus Ackre Medina">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="keywords" content="YH-böcker, programmering, C#, .NET, Java, Git, Azure, projektmetodik, yrkeshögskola, studerande, Nion Education, gratis studiematerial, Marcus Ackre Medina">
@@ -19,13 +19,13 @@
   <meta property="og:url" content="https://marcusjobb.github.io/">
   <meta property="og:site_name" content="Marcus Ackre Medina – Studiematerial">
   <meta property="og:title" content="Marcus Ackre Medina – YH-böcker i C#, Java, Git och Azure">
-  <meta property="og:description" content="Sex kostnadsfria programmeringsböcker för YH-utbildning. C# (.NET), Java, Git, Azure, projektmetodik och Usborne Computer Books — av lärare Marcus Ackre Medina, Nion Education.">
+  <meta property="og:description" content="Sju kostnadsfria programmeringsböcker för YH-utbildning. C# (.NET), Java, Git, Azure, projektmetodik och Usborne Computer Books — av lärare Marcus Ackre Medina, Nion Education.">
   <meta property="og:locale" content="sv_SE">
 
   <!-- ── Twitter / X Card ── -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Marcus Ackre Medina – YH-böcker i C#, Java, Git och Azure">
-  <meta name="twitter:description" content="Sex kostnadsfria programmeringsböcker för YH-studerande. C#, Java, Git, Azure, projektmetodik och Usborne Computer Books.">
+  <meta name="twitter:description" content="Sju kostnadsfria programmeringsböcker för YH-studerande. C#, Java, Git, Azure, projektmetodik och Usborne Computer Books.">
   <meta name="twitter:creator" content="@marcusjobb">
 
   <!-- ── Schema.org JSON-LD ── -->
@@ -74,8 +74,8 @@
         "@type": "ItemList",
         "@id": "https://marcusjobb.github.io/#booklist",
         "name": "YH-studiematerial i programmering och mjukvaruutveckling",
-        "description": "Sex kostnadsfria programmeringsböcker för yrkeshögskoleutbildning, skapade av Marcus Ackre Medina vid Nion Education i Sverige",
-        "numberOfItems": 6,
+        "description": "Sju kostnadsfria programmeringsböcker för yrkeshögskoleutbildning, skapade av Marcus Ackre Medina vid Nion Education i Sverige",
+        "numberOfItems": 7,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -182,6 +182,24 @@
                 "publisher": { "@type": "Organization", "name": "Usborne Publishing" },
                 "url": "https://usborne.com/row/books/computer-and-coding-books"
               }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "LearningResource",
+              "name": "Programmeringstermer — Lite hjälp i C# kodningen",
+              "url": "https://marcusjobb.github.io/Programmeringstermer.pdf",
+              "description": "Marcus första studiematerial från 2009 — enkla förklaringar med kodexempel av programmeringstermer i C#, skrivet för studerande som hade svårt att förstå termerna. Grunden till alla senare böcker.",
+              "author": { "@id": "https://marcusjobb.github.io/#person" },
+              "inLanguage": "sv-SE",
+              "educationalLevel": "Nybörjare",
+              "teaches": ["C#", "objektorienterad programmering", "programmeringstermer", "pseudokod", "flödesschema"],
+              "isAccessibleForFree": true,
+              "accessMode": "textual",
+              "encodingFormat": "application/pdf",
+              "dateCreated": "2009-11-03"
             }
           }
         ]
@@ -361,6 +379,7 @@
     .lang-azure     { --lang-color: #0089d6; }
     .lang-projektet { --lang-color: #1aab8a; }
     .lang-usborne   { --lang-color: #ec4899; }
+    .lang-termer    { --lang-color: #d4a017; }
 
     /* ── About / AISEO content ── */
     .about {
@@ -409,7 +428,7 @@
   <main>
     <div class="divider" aria-hidden="true">böcker</div>
 
-    <section aria-label="Studiematerial — sex gratis programmeringsböcker">
+    <section aria-label="Studiematerial — sju gratis programmeringsböcker">
       <div class="grid">
 
         <a class="card lang-csharp" href="https://marcusjobb.github.io/programmering-csharp/"
@@ -460,6 +479,14 @@
           <span class="card-cta" aria-hidden="true">Läs boken</span>
         </a>
 
+        <a class="card lang-termer" href="https://marcusjobb.github.io/Programmeringstermer.pdf"
+           type="application/pdf">
+          <span class="card-badge">C# · 2009</span>
+          <h2 class="card-title">Programmeringstermer</h2>
+          <p class="card-desc">Där allt började — mitt första studiematerial från 2009, skrivet för studerande som hade svårt att förstå termerna. Grunden till alla böcker ovan.</p>
+          <span class="card-cta" aria-hidden="true">Öppna PDF</span>
+        </a>
+
       </div>
     </section>
 
@@ -485,7 +512,8 @@
         Vattenfall med roller, sprintar och retrospektiv) samt officiella reproduktioner av
         <strong>Usborne Computer Books</strong> — de klassiska 80-talsprogrammeringsböckerna
         med <strong>ZX81</strong> och BASIC, publicerade med tillstånd av
-        <a href="https://usborne.com/row/books/computer-and-coding-books" rel="noopener" style="color:inherit">Usborne Publishing</a>.
+        <a href="https://usborne.com/row/books/computer-and-coding-books" rel="noopener" style="color:inherit">Usborne Publishing</a>, samt <strong>Programmeringstermer</strong> — Marcus första
+        studiematerial från 2009, en ordlista med kodexempel för C#-studerande som blev grunden till böckerna.
       </p>
     </section>
   </main>
